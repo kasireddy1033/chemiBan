@@ -185,8 +185,8 @@ var  chemicals=[
 "chemicalname":"Cefixime + Levofloxacin"
 }
 ];
-
-window.onload = function what() {
+/* 
+ window.onload = function what() {
     myFunc(chemicals);
 
     function myFunc(arr) {
@@ -198,14 +198,44 @@ window.onload = function what() {
                 arr[i].chemicalname + '</a><br>' + arr[0].desc + '<br>' + arr[0].date + '<br>';
             // out1 +: arr[i].description;
         }
-        document.getElementById("divshow").innerHTML = out;
+        //document.getElementById("default").innerHTML = out;
         
     }
-}
+}  */
+/* function doSomething(){
+	alert(document.getElementById("search").value);
+	myFunc(chemicals);
 
+    function myFunc(arr) {
+        var out = "";
+        var out1 = "";
+        var i;
+	
+	        for (i = 0; i < arr.length; i++) {
+				
+				if(document.getElementById("search").value==arr[i].chemicalname)
+				{
+            out += '<a href="' + arr[0].source + '">' +
+                arr[i].chemicalname + '</a><br>' + arr[0].desc + '<br>' + arr[0].date + '<br>';
+            // out1 +: arr[i].description;
+				}
+        }
+} */
 
-
-
-
-
+ function doSomething(){
+    function myFunc(arr) {
+        var i,out = "";
+        for (i = 0; i < arr.length; i++) {
+			if((document.getElementById("search").value).localeCompare(arr[i].chemicalname)==0)
+				{
+           out += '<a href="' + arr[0].source + '">' +
+                arr[i].chemicalname + '</a><br>' + arr[0].desc + '<br>' + arr[0].date + '<br>';
+			}
+			
+				//alert(out);
+        }
+		document.getElementById("result").innerHTML = out;
+    }
+	myFunc(chemicals);	
+} 
 
