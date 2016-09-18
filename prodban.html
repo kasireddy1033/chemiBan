@@ -1,0 +1,85 @@
+<!Doctype html>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<title>chemiBan</title>
+	<script src="jquery-3.1.0.min.js"></script>
+	<script src="chemicalnew.js"></script>
+	<style>
+	body{
+	background-image:url("bg.jpg");
+	
+		}
+	*{
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+.container{
+	width:350px;
+	margin:0px auto;
+}
+img{
+border-radius:25px;
+}
+<!-- .input[type=text] {
+    width: 350px;
+}
+input[type=text]:focus {
+    width: 350px;
+} -->
+a:link {
+    color: red;
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: hotpink;
+}
+a:active {
+    color: blue;
+}
+	</style>
+
+
+	</head>
+<body>
+<div class="container">
+<pre>
+
+</pre>
+<a href="index.html">
+<img src="chemiBan.png" width=350px height=190px/><br>
+</a>
+<pre> 
+
+</pre>
+<form>
+<input type="text" id="search" list="chemicals" placeholder="e.g. Diclofenac" style="width:350px" style="height:350px"><br><br>
+  <center><input type="button" id="searchbutton" value="Search" onclick="doSomething()"/>
+  <h>    </h>
+  <input type="reset" value="Reset">
+  </center>
+  <datalist id="chemicals">
+    	<option value="Nimesulide + Diclofenac">
+		<option value="Nimesulide + Cetirizine + Caffeine">
+		<option value="Nimesulide + Tizanidine">
+		<option value="Paracetamol + Cetirizine + Caffeine">
+		<option value="Diclofenac + Tramadol + Chlorzoxazone">
+		<option value="Dicyclomine + Paracetamol + Domperidone">
+		<option value="Nimesulide + Paracetamol dispersible tablets">
+		<option value="Paracetamol + Phenylephrine + Caffeine">
+		<option value="Diclofenac + Tramadol + Paracetamol">
+		<option value=" Diclofenac + Paracetamol + Chlorzoxazone + Famotidine">
+		<option value="Naproxen + Paracetamol">
+		<option value="Nimesulide + Serratiopeptidase">
+		<option value="Paracetamol + Diclofenac + Famotidine">
+
+
+  </datalist>
+  <p id="result"></p>
+  </form>
+</div>
+</body>
+</html>
