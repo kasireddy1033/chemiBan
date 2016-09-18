@@ -7,8 +7,9 @@
 	<script src="chemicalnew.js"></script>
 	<style>
 	body{
-	background-color:#DCEED2;
-	}
+	background-image:url("bg.jpg");
+	
+		}
 	*{
 	margin:0px;
 	padding:0px;
@@ -21,14 +22,12 @@
 img{
 border-radius:25px;
 }
-.input[type=text] {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+<!-- .input[type=text] {
+    width: 350px;
 }
 input[type=text]:focus {
-    width: 100%;
-}
+    width: 350px;
+} -->
 a:link {
     color: red;
 }
@@ -42,10 +41,11 @@ a:active {
     color: blue;
 }
 	</style>
+
+
 	</head>
 <body>
 <div class="container">
-<p>Click the image to go to home</p>
 <pre>
 
 </pre>
@@ -55,17 +55,26 @@ a:active {
 <pre> 
 
 </pre>
-<input type="text" name="search" placeholder="Search..">
-    <header>
-        <h1>Chemical List</h1>
-    </header>
-    <div class="container">
-        <div class="row">
-            <!--<button id="ShowData">Show</button>-->
-            <div id="divshow"></div>
+<input type="text" id="search" list="chemicals" placeholder="e.g. Diclofenac" style="width:350px" style="height:350px"><br><br>
+  <center><input type="button" id="searchbutton" value="Search" onclick="doSomething()"/></center>
+  <datalist id="chemicals">
+    	<option value="Nimesulide + Diclofenac">
+		<option value="Nimesulide + Cetirizine + Caffeine">
+		<option value="Nimesulide + Tizanidine">
+		<option value="Paracetamol + Cetirizine + Caffeine">
+		<option value="Diclofenac + Tramadol + Chlorzoxazone">
+		<option value="Dicyclomine + Paracetamol + Domperidone">
+		<option value="Nimesulide + Paracetamol dispersible tablets">
+		<option value="Paracetamol + Phenylephrine + Caffeine">
+		<option value="Diclofenac + Tramadol + Paracetamol">
+		<option value=" Diclofenac + Paracetamol + Chlorzoxazone + Famotidine">
+		<option value="Naproxen + Paracetamol">
+		<option value="Nimesulide + Serratiopeptidase">
+		<option value="Paracetamol + Diclofenac + Famotidine">
 
-        </div>
-    </div>
+
+  </datalist>
+  <p id="result"></p>
 </div>
 </body>
 </html>
